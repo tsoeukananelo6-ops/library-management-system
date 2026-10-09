@@ -1,0 +1,943 @@
+/* General Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+    background-color: #c97990;
+    color: white;
+    padding: 18px 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #b56780;
+}
+
+
+/* Dashboard */
+
+.dashboard {
+    padding: 40px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.welcome {
+    margin-bottom: 30px;
+}
+
+.welcome h1 {
+    color: #b56780;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Dashboard Statistics */
+
+.stats-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+/* Dashboard Statistic Boxes */
+
+.stat-card {
+    background-color: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    min-height: 140px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.stat-card h3 {
+    color: #b56780;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Library Image (if used) */
+
+.library-image {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.library-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.55);
+
+    color: white;
+}
+
+.image-text h2 {
+    margin-bottom: 8px;
+}
+
+
+/* Page Container */
+
+.page-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 40px;
+}
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    color: #b56780;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #333;
+}
+
+
+/* Form Card */
+
+.form-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.form-card h2 {
+    color: #b56780;
+    margin-bottom: 25px;
+}
+
+
+/* Book Form */
+
+#bookForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #222;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #d98fa3;
+    box-shadow: 0 0 0 3px rgba(217, 143, 163, 0.18);
+}
+
+
+/* Primary Button */
+
+.primary-button {
+    background-color: #d98fa3;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.primary-button:hover {
+    background-color: #c97990;
+}
+
+.primary-button:active {
+    opacity: 0.85;
+}
+
+
+/* Table Card */
+
+.table-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+    margin-bottom: 20px;
+}
+
+.table-header h2 {
+    color: #b56780;
+    margin-bottom: 5px;
+}
+
+.table-header p {
+    color: #333;
+}
+
+
+/* Table */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.table-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-card th {
+    background-color: #c97990;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+.table-card td {
+    padding: 13px;
+    border-bottom: 1px solid #ddd;
+    color: #222;
+}
+
+.table-card tr:hover {
+    background-color: #f5f5f5;
+}
+
+.table-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: #f4f6f9;
+    border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: #d98fa3;
+    border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #c97990;
+}
+
+
+/* Transaction Form */
+
+#transactionForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#transactionForm .form-group:last-of-type {
+    grid-column: 1 / 2;
+}
+
+#transactionForm select,
+#transactionForm input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: white;
+    color: #222;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#transactionForm select:focus,
+#transactionForm input:focus {
+    outline: none;
+    border-color: #d98fa3;
+    box-shadow: 0 0 0 3px rgba(217, 143, 163, 0.18);
+}
+
+
+/* Transaction Table */
+
+#transactionTable td {
+    padding: 13px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* User Management Form */
+
+#userForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#userForm select,
+#userForm input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: white;
+    color: #222;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#userForm select:focus,
+#userForm input:focus {
+    outline: none;
+    border-color: #d98fa3;
+    box-shadow: 0 0 0 3px rgba(217, 143, 163, 0.18);
+}
+
+
+/* User Table */
+
+#userTable td {
+    padding: 13px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* User Management Login Box (shared by Login page) */
+
+.login-box {
+    max-width: 480px;
+    width: 100%;
+    margin: 0;
+
+    background-color: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(8px);
+
+    padding: 45px 45px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+}
+
+.login-box h1 {
+    color: #b56780;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.login-box p {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.login-logo {
+    font-size: 46px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+#userLoginForm {
+    text-align: left;
+}
+
+#userLoginForm .form-group {
+    margin-bottom: 18px;
+}
+
+#userLoginForm label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+#userLoginForm input,
+#userLoginForm select {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    background-color: #ffffff;
+
+    color: #222;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#userLoginForm input:focus,
+#userLoginForm select:focus {
+    outline: none;
+    border-color: #d98fa3;
+    box-shadow: 0 0 0 3px rgba(217, 143, 163, 0.18);
+}
+
+
+/* Admin Section */
+
+.admin-section {
+    width: 100%;
+}
+
+
+/* Logout Button */
+
+.logout-button {
+    margin-top: 25px;
+
+    padding: 12px 25px;
+
+    background-color: #c97990;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: background-color 0.2s ease;
+}
+
+.logout-button:hover {
+    background-color: #d98fa3;
+}
+
+
+/* Badges */
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge-admin {
+    background-color: #d98fa3;
+}
+
+.badge-librarian {
+    background-color: #6c9bcf;
+}
+
+.badge-member {
+    background-color: #8bc98f;
+}
+
+
+/* Action Buttons */
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.small-button {
+    padding: 7px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    color: white;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.small-button:active {
+    opacity: 0.85;
+}
+
+.edit-button {
+    background-color: #6c9bcf;
+}
+
+.edit-button:hover {
+    background-color: #5a88bb;
+}
+
+.delete-button {
+    background-color: #c97990;
+}
+
+.delete-button:hover {
+    background-color: #b56780;
+}
+
+.save-button {
+    background-color: #8bc98f;
+}
+
+.save-button:hover {
+    background-color: #79b87e;
+}
+
+.cancel-button {
+    background-color: #999;
+}
+
+.cancel-button:hover {
+    background-color: #777;
+}
+
+
+/* Form Actions */
+
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+
+/* Form Messages */
+
+.form-error {
+    color: #c0392b;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.form-success {
+    color: #27ae60;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-actions .primary-button {
+    flex: 0 0 auto;
+}
+
+
+/* Empty State */
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #555;
+    font-size: 16px;
+}
+
+
+/* Low Stock / Out of Stock highlighting */
+
+.low-stock {
+    background-color: #fff3cd !important;
+    color: #856404;
+    font-weight: bold;
+}
+
+.out-of-stock {
+    background-color: #f8d7da !important;
+    color: #721c24;
+    font-weight: bold;
+}
+
+
+/* Full Application Background */
+
+.app-background {
+    min-height: 100vh;
+    width: 100%;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.app-overlay {
+    min-height: 100vh;
+    width: 100%;
+
+    background-color: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(3px);
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Main content scrolls inside itself, page does not scroll */
+
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: transparent;
+}
+
+
+/* Login Page Wrapper */
+
+.auth-scroll {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    overflow-y: auto;
+}
+
+
+/* Ensure cards stay readable over the background */
+
+.app-overlay .table-card,
+.app-overlay .form-card,
+.app-overlay .stat-card {
+    background-color: #ffffff;
+}
+
+
+/* Accessibility focus outline */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid #c97990;
+    outline-offset: 2px;
+}
+
+
+/* Disabled state */
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* Print-friendly */
+
+@media print {
+    .navbar,
+    .form-card,
+    .action-buttons,
+    .primary-button,
+    .small-button {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .table-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+
+/* Responsive Dashboard */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .dashboard {
+        padding: 20px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .library-image {
+        height: 300px;
+    }
+
+    .page-container {
+        padding: 20px;
+    }
+
+    .form-card,
+    .table-card {
+        padding: 20px;
+    }
+
+    #bookForm,
+    #transactionForm,
+    #userForm {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        grid-column: 1;
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .small-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .app-background {
+        background-attachment: scroll;
+    }
+
+    .auth-scroll {
+        padding: 20px 15px;
+        align-items: flex-start;
+    }
+
+    .login-box {
+        padding: 30px 25px;
+    }
+
+    .login-logo {
+        font-size: 38px;
+    }
+
+    .login-box h1 {
+        font-size: 22px;
+    }
+}
+/* Navbar Logo */
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-image {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+    background-color: white;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Login Logo Image */
+
+.login-logo-image {
+    display: block;
+    margin: 0 auto 15px auto;
+
+    max-width: 130px;
+    max-height: 130px;
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* Logout Button inside Navbar */
+
+.navbar-logout {
+    background-color: transparent;
+    color: white;
+    border: none;
+
+    padding: 10px 15px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    transition: background-color 0.2s ease;
+}
+
+.navbar-logout:hover {
+    background-color: #b56780;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .navbar-logo {
+        justify-content: center;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-image {
+        height: 36px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .login-logo-image {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
