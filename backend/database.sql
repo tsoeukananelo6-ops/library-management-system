@@ -1,0 +1,32 @@
+CREATE DATABASE IF NOT EXISTS library_db;
+USE library_db;
+
+CREATE TABLE IF NOT EXISTS books (
+  id VARCHAR(50) PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  author VARCHAR(255) NOT NULL,
+  genre VARCHAR(100) NOT NULL,
+  isbn VARCHAR(20) NOT NULL,
+  quantity INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS users (
+  id VARCHAR(50) PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  membershipId VARCHAR(50) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  role VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS transactions (
+  id VARCHAR(50) PRIMARY KEY,
+  bookId VARCHAR(50) NOT NULL,
+  bookTitle VARCHAR(255) NOT NULL,
+  type VARCHAR(50) NOT NULL,
+  quantity INT NOT NULL,
+  date VARCHAR(100) NOT NULL,
+  FOREIGN KEY (bookId) REFERENCES books(id) ON DELETE CASCADE
+);
+
+INSERT INTO users (id, name, membershipId, password, role) 
+VALUES ('admin-123', 'Admin', '123456', 'admin123', 'Admin');
